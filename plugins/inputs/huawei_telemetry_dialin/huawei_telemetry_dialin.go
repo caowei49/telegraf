@@ -7,7 +7,7 @@ import (
     "github.com/influxdata/telegraf"
     internaltls "github.com/influxdata/telegraf/plugins/common/tls"
     "github.com/influxdata/telegraf/plugins/inputs"
-    "github.com/influxdata/telegraf/plugins/inputs/huawei_telemetry_dialin/huawei_dialin"
+    huawei_dialin "github.com/influxdata/telegraf/plugins/inputs/huawei_telemetry_dialin/huawei_dialin"
     "github.com/influxdata/telegraf/plugins/parsers"
     "google.golang.org/grpc"
     "google.golang.org/grpc/credentials"

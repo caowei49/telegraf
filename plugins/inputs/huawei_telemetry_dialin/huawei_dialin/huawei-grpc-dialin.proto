@@ -18,6 +18,7 @@ message SubsArgs {            //Subscribing request parameter.
         bool suppress_redundant = 8;  //Redundancy suppression. The sampled data is not reported if the data content remains unchanged. 0: disabled, 1: enabled.
         uint64 delay_time = 9;        //Delay time, which ranges from 100 to 60000, in ms. After data changes, the new data is reported after a specified delay. The new changes during the delay are accumulated. This parameter is used to prevent a large amount of data from being reported during service flapping.
     }
+}
 message SubsReply {            //Subscribing response parameter.
     uint32 subscription_id = 1; //If the subscribing is successful, the subscription ID is returned. If the subscribing fails, 0 is returned.
     uint64 request_id = 2;        //ID of the subscribing request.
@@ -35,5 +36,4 @@ message CancelReply {            //Unsubscribing response parameter.
     uint64 request_id = 1;    //Request ID, which is transferred by the invoker.
     string response_code = 2; //Return code. The value 200 indicates a success.
     string message = 3;            //Error description.
-}
 }
